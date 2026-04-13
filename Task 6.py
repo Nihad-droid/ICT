@@ -278,7 +278,7 @@ def ikinci_metod():
 text = input("Setri daxil edin: ")
 words = text.split()
 print(words[0])
-"""
+
 # Sual 16
 file = input("Faylin adini daxil edin: ")
 extension = input("Uzantini daxil edin: ")
@@ -287,3 +287,24 @@ new_file = ""
 for i in file:
     new_file += f"{i}."
 print(f'{new_file}{extension}')
+
+# Sual 17
+name = input("Faylin adini daxil edin: ")
+taboo = r"/\:*?“”<>|"
+
+uzunluq = 0
+for i in name:
+    uzunluq += 1
+
+for i in taboo:
+    if i in name or uzunluq > 10:
+        print("//")
+        print("That name won't work. Use a name that doesn't include characters like \/:*?“”<>|")
+        print("And please make sure it is not longer than 10 characters!")
+        file = False
+        break
+    file = True
+if file == True:
+    print(f"{name} is saved")
+"""
+# Sual 18
