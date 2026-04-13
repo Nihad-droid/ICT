@@ -76,4 +76,12 @@ def maximum(a,b):
 
 meet_time = minimum(anna_end, bob_end) - maximum(anna_start, bob_start)
 print(meet_time if meet_time > 0 else "they didnt meet")
-"""
+
+# Task 6
+x = float(input("x-i daxil edin: "))
+y = float(input("y-daxil edin: "))
+if (y <= -x**2+5 and x**2+y**2>=3 and y>=-3) or ((x+0.5)**2+(y-0.5)**2<=0.1 or (x-0.5)**2+(y-0.5)**2<=0.1 or (x**2+(y+0.6)**2<=0.7 and y<=-0.5)):
+    print("Şükür, daxildir.")
+else:
+    print("Daxil deyil...")
+"""                                             
