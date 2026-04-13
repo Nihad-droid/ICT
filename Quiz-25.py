@@ -53,4 +53,27 @@ elif p1_price == p2_price:
     print(f"Both companies offer {p1_price}. Choose as you wish.")
 else:
     print(f"Go with company 1 as they offer {p1_price}, while company 2 presents {p2_price}")
+
+# Task 5
+anna_start = int(input("Enter minutes after midnight for Anna's advent: "))
+bob_start = int(input("Enter minutes after midnight for Bob's arrival:"))
+anna_end = int(input("Enter minutes after midnight for Anna's departure: "))
+bob_end = int(input("Enter minutes after midnight for Bob's furlough: "))
+def minimum(a,b):
+    if a > b:
+        return b
+    elif a < b:
+        return a
+    else:
+        return a
+def maximum(a,b):
+    if a > b:
+        return a
+    elif a < b:
+        return b
+    else:
+        return b
+
+meet_time = minimum(anna_end, bob_end) - maximum(anna_start, bob_start)
+print(meet_time if meet_time > 0 else "they didnt meet")
 """
