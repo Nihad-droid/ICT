@@ -36,4 +36,21 @@ def function(N):
 
 N = int(input("Eded daxil edin: "))
 print(function(N))
-"""   
+
+# Task 4
+p1_100 = float(input("Price for first 100 of Company 1: "))
+p1_1000 =float(input("Price for first 1000 of Company 1: "))
+p1_rest =float(input("Price for rest of Company 1: "))
+p2_100 = float(input("Price for first 100 of Company 2: "))
+p2_1000 =float(input("Price for first 1000 of Company 2: "))
+p2_rest =float(input("Price for rest of Company 2: "))
+amount = int(input("How many do you want?: "))
+p1_price = 100*p1_100 + 1000*p1_1000 + (amount-1100)*p1_rest
+p2_price = 100*p2_100 + 1000*p2_1000 + (amount-1100)*p2_rest
+if p1_price > p2_price:
+    print(f"Go with company 2 as they offer {p2_price}, while company 1 presents {p1_price}")
+elif p1_price == p2_price:
+    print(f"Both companies offer {p1_price}. Choose as you wish.")
+else:
+    print(f"Go with company 1 as they offer {p1_price}, while company 2 presents {p2_price}")
+"""
