@@ -210,7 +210,7 @@ for i in toplananlar:
     total += int(i)
 
 print(total)
-"""
+
 # Sual 14
 def birinci_metod():
     ifade = input("Ifadeni daxil edin:\n")
@@ -273,3 +273,17 @@ def ikinci_metod():
         result = result - num3
 
     print("Cavab:", result)
+
+# Sual 15
+text = input("Setri daxil edin: ")
+words = text.split()
+print(words[0])
+"""
+# Sual 16
+file = input("Faylin adini daxil edin: ")
+extension = input("Uzantini daxil edin: ")
+file = file.split(".")[:-1]
+new_file = ""
+for i in file:
+    new_file += f"{i}."
+print(f'{new_file}{extension}')
