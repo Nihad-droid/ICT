@@ -262,5 +262,26 @@ for i in list1:
     if type(i) == int and i >= 0:
         list2.append(i)
 print(list2)
-"""
+
 # Sual 18
+eded = int(input("Eded daxil edin: "))
+list = []
+for i in range(1,eded+1):
+    if eded%i == 0:
+        list.append(i)
+print(list)
+
+# Sual 19
+import math
+N = [6,2,5,3,9,7,4]
+List = []
+
+for i in N:
+    n = list(range(1, i+1))
+    sum = 0
+    for x in n:
+        sum += (4*math.sin(x)+2*x)/(math.log(9*x, 3)*2**x)
+    List.append(sum)
+
+print(List)
+"""
