@@ -381,20 +381,107 @@ min2, max2 = find_second_min_max(List)
 print(f"Siyahi: {List}")
 print(f"2-ci minimum: {min2}")
 print(f"2-ci maksimum: {max2}")
-"""
+
 # Sual 24 
-Massiv = []
-giris = input("Massivi daxil edin bosluqlarla: ")
+import random
 
-number = ""
-for i in giris + ' ':
-    if i != " ":
-        number += i
+massiv = [random.randint(1, 100) for i in range(10)]
+
+max1_val = max2_val = -1
+max1_idx = max2_idx = -1
+
+def len(x):
+    l = 0
+    for i in x:
+        l += 1
+    return l
+
+for i in range(len(massiv)):
+    current_val = massiv[i]
+    
+    if current_val > max1_val:
+        max2_val = max1_val
+        max2_idx = max1_idx
+        
+        max1_val = current_val
+        max1_idx = i
+        
+    elif current_val > max2_val:
+        max2_val = current_val
+        max2_idx = i
+
+print(f"Massiv: {massiv}")
+print(f"Maksimal element: A[{max1_idx + 1}]={max1_val}")
+print(f"İkinci maksimum: A[{max2_idx + 1}]={max2_val}")
+
+# Sual 25
+import random
+massiv = [random.randint(1, 100) for i in range(10)]
+
+max_val = massiv[0]
+count = 0
+
+for x in massiv:
+    if x > max_val:
+        # Yeni daha boyuk eded taparsam eger
+        max_val = x
+        count = 1  # Saymaqa yeniden baslayiriq
+    elif x == max_val:
+        count += 1
+
+print(f"Maksimal qiymət: {max_val, massiv}")
+print(f"Elementlərin sayı: {count}")
+
+# Sual 26
+import random
+while True:
+    N = int(input("Massivin olcusunu daxil edin: "))
+    if N%2 == 0 :       
+        list1 = [random.randint(100, 200) for i in range(N)]
+        break
     else:
-        Massiv.append(int(number))
-        number = ""
+        print("N cut eded olmalidir!")
+print(list1)
 
-max = 0
-max_count = 0
-for i in Massiv:
-    pass
+list_kublar_cemi = []
+for i in list1:
+    sum = 0
+    while i > 0:
+        digit = i % 10
+        i //= 10
+        sum += digit**3
+    list_kublar_cemi.append(sum)
+print(list_kublar_cemi)
+
+def len(x):
+    l = 0
+    for i in x:
+        l += 1
+    return l
+
+def EKOB(a, b):
+    if a > b:
+        c = a
+    else:
+        c = b
+    for i in range(1, c + 1):
+        if a % i == 0 and b % i == 0:
+            ebob = i
+    return a*b/ebob
+
+list1_ekob = []
+for i in range(len(list_kublar_cemi)):
+    if i % 2 == 0:
+        pass
+    else:
+        list1_ekob.append(EKOB(list_kublar_cemi[i-1], list_kublar_cemi[i]))
+print(list1_ekob)
+
+def hasil(x):   # Sualla ne elaqesi var bilmirem amma sual teleb edir
+    h = 0
+    while x > 0:
+        d = x % 10
+        x //= 10
+        h *= d
+    return h
+"""
