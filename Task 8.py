@@ -1,13 +1,13 @@
-"""# Sual 1
+# Sual 1
 import random
-massiv = [random.randint(0,5) for _ in range(random.randint(5,10)]
+massiv = [random.randint(0,5) for _ in range(random.randint(5,10))]
 print(massiv)
 find = int(input("Ne axtaririq: "))
 tapilanlar = []
 index = 0
 for element in massiv:
     if element == find:
-        tapilanlar.append(f"A[{index}]={element}")
+        tapilanlar = tapilanlar + [f"A[{index}]={element}"]
     index += 1
 if tapilanlar:
     print("Tapildi: ")
@@ -31,7 +31,7 @@ print('massiv =',massiv)
 yeni_massiv = []
 
 for i in massiv:
-    yeni_massiv.append(sum_of_digits(i))
+    yeni_massiv = yeni_massiv + [sum_of_digits(i)]
 
 print('reqemleri toplanmis =',yeni_massiv)
 
@@ -46,10 +46,16 @@ for i in range(length):
 print('sorted =',yeni_massiv)
 
 # Sual 3
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 massiv = []
 print("5 setri daxil edin: ")   # Numune: 1.ana \n 2.ata
 for i in range(5):
-    massiv.append(input().split('.')[-1])
+    massiv = massiv + [input().split('.')[-1]]
 print(massiv)
 
 for i in range(5):
@@ -63,10 +69,17 @@ names = []
 print("Ad, ata adi ve soyadinizi daxil edin: ")
 print("Numune: A.Q. Veliyev")
 print("Bitirmek ucun bos setir daxil et.")
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 while len(names) < 20:
     name = input()
     if name != "":
-        names.append(name)
+        names = names + [name]
     else:
         break
 
@@ -76,20 +89,14 @@ def split(x,y): # x = Cumle, y = ayirici
     index = 0
     while index < len(x):
         if x[index:index+len(y)] == y:
-            result.append(ifade)
+            result = result + [ifade]
             ifade = ""
             index += len(y)
         else:
             ifade += x[index]
             index += 1
-    result.append(ifade)
+    result = result + [ifade]
     return result
-
-def len(x):
-    l = 0
-    for _ in x:
-        l += 1
-    return l
 
 for _ in range(len(names)):
     for x in range(0, len(names) - 1):
@@ -99,6 +106,13 @@ print(names)
 
 # Sual 5
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 Unsorted = [random.randint(-100, 100) for _ in range(10)]
 print('Unsorted =', Unsorted)
 for i in range(len(Unsorted)):
@@ -120,15 +134,22 @@ print("Sorted_2 =", Half1+Half2)
 
 # Sual 6
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 massiv = [random.randint(-100, 100) for _ in range(6)]
 new_massiv = []
 print(massiv)
 for i in massiv:
     if i > 0:
-        new_massiv.append(i)
+        new_massiv = new_massiv + [i]
 for i in massiv:
     if i <= 0:
-        new_massiv.append(i)
+        new_massiv = new_massiv + [i]
 
 for i in range(len(new_massiv)):
     for j in range(0, len(new_massiv)-1):
@@ -142,6 +163,13 @@ print(new_massiv)
 
 # Sual 7
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 massiv1 = [random.randint(-10000, 10000) for _ in range(1000)]
 massiv2 = [random.randint(-10000, 10000) for _ in range(1000)]
 massiv3 = [random.randint(-10000, 10000) for _ in range(1000)]
@@ -153,8 +181,8 @@ massivler2 = []
 for massiv in massivler1:
     new_sub_list = []
     for item in massiv:
-        new_sub_list.append(item)
-    massivler2.append(new_sub_list)
+        new_sub_list = new_sub_list + [item]
+    massivler2 = massivler2 + [new_sub_list]
 swaps1 = 0
 for massiv in massivler1:
     for i in range(len(massiv)):    # Bubble Sort alqoritmi
@@ -177,6 +205,13 @@ print('bubble sort:', average_swaps1, 'selective sort:', average_swaps2)
 
 # Sual 8
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 X = int(input("X ededini daxil edin: "))
 massiv = [random.randint(1,10) for _ in range(10, 20)]
 print(massiv)
@@ -207,6 +242,13 @@ else:
 
 # Sual 9
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 X = int(input("X ededini daxil edin: "))
 massiv = [random.randint(1,10) for _ in range(10, 20)]
 print(massiv)
@@ -257,6 +299,13 @@ else:
 
 # Sual 10
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 massiv = [random.randint(1,10) for _ in range(10, 20)]
 for i in range(len(massiv)):
     for x in range(0, len(massiv)-1):
@@ -295,6 +344,13 @@ else:
 
 # Sual 11
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 massiv = [random.randint(100, 1000) for _ in range(8)]
 print("Massiv:", massiv)
 
@@ -335,6 +391,13 @@ print('Yekun =', half1 + half2)
 
 # Sual 12
 import random
+
+def len(x):
+    l = 0
+    for _ in x:
+        l += 1
+    return l
+
 N = int(input("Interval daxil edin: "))
 mylist = [random.randint(2, N-1) for _ in range(10)]
 print(mylist)
@@ -372,15 +435,6 @@ for i in range(len(half2)):
     half2[i], half2[max_index] = half2[max_index], half2[i]
 mylist = half1 + half2
 print('mylist sorted =', mylist)  
-"""
-
-
-
-
-
-
-
-
 
 
 r"""
